@@ -5,9 +5,14 @@ import { Component } from '@angular/core';
   templateUrl:'./home.component.html'
 })
 export class HomeComponent {
+  category: string | undefined;
   cols = 3
 
   onColumnsCountChange(colsNum: number): void{
     this.cols = colsNum;
+  }
+
+  onCategoryName(category: string):void{
+    this.category = category;
   }
 }
