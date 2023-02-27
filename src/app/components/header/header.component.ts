@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   set cart(cart: Cart){
     this._cart = cart;
-    this.NumOfItemsInCart = this.cart.items.map(item => item.quantity).reduce((pre, curr) => pre + curr);
+    this.NumOfItemsInCart = this.cart.items.map(item => item.quantity).reduce((pre, curr) => pre + curr, 0);
   }
 
   constructor(private cartService: CartService){};

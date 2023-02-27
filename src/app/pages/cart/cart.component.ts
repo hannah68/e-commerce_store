@@ -9,38 +9,34 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit{
   dataSource: Array<CartItem> = [];
   columnsName: Array<string> = ['product', 'name', 'price', 'quantity', 'total', 'action'];
-  cart: Cart = { items: [
-    {
-      product: 'https://via.placeholder.com/150',
-      name: 'snickers',
-      price: 200,
-      quantity: 1,
-      id: 1
-    },
-    {
-      product: 'https://via.placeholder.com/150',
-      name: 'bag',
-      price: 17,
-      quantity: 1,
-      id: 2
-    },
-    {
-      product: 'https://via.placeholder.com/150',
-      name: 'jewlry',
-      price: 55,
-      quantity: 2,
-      id: 3
-    },
-  ]};
+  cart: Cart = { items: []};
 
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.dataSource = this.cart.items;
+    this.cartService.cart.subscribe(cartItmes => {
+      this.cart = cartItmes;
+      this.dataSource = this.cart.items;
+    })
   }
 
   getTotal(items: CartItem[]): number{
     return this.cartService.getTotal(items);
   }
+
+  onClearCart():void{
+    this.cartService.clearCart()
+  }
+
+  onRemoveItemFromCart(item:CartItem): void{
+    this.cartService.removeItemFromCart(item);
+  }
   
+  onAddQuantity(item: CartItem): void{
+    this.cartService.addToCart(item);
+  }
+
+  onRemoveQuantity(item: CartItem): void{
+    this.cartService.subtractQuantity(item);
+  }
 }
