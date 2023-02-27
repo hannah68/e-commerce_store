@@ -14,7 +14,7 @@ export class ProductBoxComponent {
     price:320,
     category:'shoes',
     description:'very chich',
-    image:'http://cia.placeholder.com/150',
+    image:'http://via.placeholder.com/150',
   };
 
   onAddToCart(){
