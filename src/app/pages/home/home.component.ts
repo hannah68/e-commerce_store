@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy{
   }
 
   getProducts(): void{
-    this.productsSubscription = this.storeService.getAllProducts(this.limit, this.sort).subscribe(_products => {
+    this.productsSubscription = this.storeService.getAllProducts(this.limit, this.sort, this.category).subscribe(_products => {
       this.products = _products;
     });
   }
@@ -38,6 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   onCategoryName(category: string):void{
     this.category = category;
+    console.log('category', category)
+    this.getProducts();
   }
 
   OnAddItemToCart(product: Product): void{
