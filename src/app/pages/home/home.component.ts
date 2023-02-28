@@ -4,18 +4,19 @@ import { Product } from 'src/app/model/product.model';
 import { CartService } from 'src/app/services/cart.service';
 import { StoreService } from 'src/app/services/store.service';
 // 1 item per row(1 column) has height of 400, 3 item per row has height of 335
-const ROWS_HEIGHT: {[id:number]: number} = {1: 400, 3: 335, 4: 350}
+const ROWS_HEIGHT: {[id:number]: number} = {1: 300, 3: 335, 4: 350}
 
 @Component({
   selector: 'app-home',
-  templateUrl:'./home.component.html'
+  templateUrl:'./home.component.html',
+  styleUrls:['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy{
   category: string | undefined;
   cols = 3;
   rowHeight = ROWS_HEIGHT[this.cols];
   products: Product[] | undefined;
-  sort = 'Desc';
+  sort = 'desc';
   limit = '12';
   productsSubscription: Subscription | undefined;
 

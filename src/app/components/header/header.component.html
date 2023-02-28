@@ -1,16 +1,18 @@
-<mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
-    <a routerLink="home">Jewlry Store</a>
+<mat-toolbar class="max-w-full mx-auto border-x justify-between p-6" style="background-color:#669999; padding:0px 31px;">
+    <a routerLink="home" class="logo">ShopPrime</a>
     <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon 
             [matBadge]="NumOfItemsInCart" 
             matBadgeColor="warn"
             [matBadgeHidden]="!NumOfItemsInCart"
+            style="transform: scale(2);"
         >shopping_cart</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" class="m-3 w-max">
         <div class="p-3 divide-y divide-solid">
+            <!-- view cart row -->
             <div class="pb-3 flex justify-between">
-                <span class="mr-16">{{NumOfItemsInCart}}Items</span>
+                <span class="mr-16">{{NumOfItemsInCart}} Items</span>
                 <a routerLink="cart">View Cart</a>
             </div>
             <div class="py-3" *ngIf="cart.items.length">
@@ -21,21 +23,19 @@
                     <span class="font-bold">{{item.price| currency:'GBP'}}</span>
                 </div>
             </div>
+            <!-- total row -->
             <div class="flex justify-between py-3 font-light">
                 Total:
                 <span class="font-bold">{{getTotal(cart.items) | currency:'GBP'}}</span>
             </div>
-            <div class="pt-3 flex justify-between">
+            <!-- clear btn row -->
+            <div class="pb-3 float-right">
                 <button 
-                    class="bg-rose-600 text-white rounded-full w-9 h-9"
+                    mat-raised-button
+                    color="warn"
                     (click)="clearCart()"
                     >
-                    <mat-icon>remove_shopping_cart</mat-icon>
-                </button>
-                <button 
-                routerLink="cart" 
-                class="bg-green-600 text-white rounded-full w-9 h-9">
-                    <mat-icon>shopping_cart</mat-icon>
+                    clear cart
                 </button>
             </div>
         </div>
