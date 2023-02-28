@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy{
   cols = 3;
   rowHeight = ROWS_HEIGHT[this.cols];
   products: Product[] | undefined;
-  sort = 'desc';
+  sort = 'Desc';
   limit = '12';
   productsSubscription: Subscription | undefined;
 
@@ -48,6 +48,16 @@ export class HomeComponent implements OnInit, OnDestroy{
       quantity: 1,
       id: product.id,
     });
+  }
+
+  onItemsShowCountChange(count: number): void{
+    this.limit = count.toString();
+    this.getProducts();
+  }
+
+  onSortItemsChange(newSort: string): void{
+    this.sort = newSort;
+    this.getProducts();
   }
 
   ngOnDestroy(): void {
