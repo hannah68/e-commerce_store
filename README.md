@@ -30,7 +30,8 @@ The user has the ability to:
 
 ## Installation
 - First, run `npm i` to install the dependencies (need node.js for npm)
-- Then, run `ng serve` to run the app via <a href="http://localhost:4200">localhost<a/>
+- run `ng serve` to run the app via <a href="http://localhost:4200">localhost<a/>
+- run `node server.js` to proceed the checkout using Stripe
 
 ## Future development
 1. In the future, I can add more functionality to the website, such as the ability to filter products by brand or customer review.
