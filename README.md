@@ -1,27 +1,32 @@
-# ECommerceStore
+# ShopPrime
+> ShopPrime is an e-commerce website using Angular 15.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+<img src='./src/assets/images/shoprime1.png' width="600px"/>
+<img src='./src/assets/images/shoprime2.png' width="600px"/>
+<img src='./src/assets/images/shoprime3.png' width="600px"/>
+<img src='./src/assets/images/shoprime4.png' width="600px"/>
 
-## Development server
+## Features
+The user has the ability to:
+- Filter products based on their categories
+- Sort products based on the highest or the lowest price
+- Add items to basket
+- Edit the basket(removing or adding more items)
+- Proceed to checkout
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack
+- Angular
+- Typescript
+- Tailwindcss
+- MaterialUi
+- Express
+- Stripe
 
-## Code scaffolding
+## Installation
+- First, run `npm i` to install the dependencies (need node.js for npm)
+- Then, run `ng serve` to run the app via <a href="http://localhost:4200">localhost<a/>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Future development
+1. In the future, I can add more functionality to the website, such as the ability to filter products by brand or customer review.
+2. I would implement MySQL or MongoDB for my database.
+3. A registration feature should be available on the site so that users can keep track of the items that have been added to their baskets and post reviews.
