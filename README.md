@@ -27,6 +27,7 @@ The user has the ability to:
 - MaterialUi
 - Express
 - Stripe
+- <a href="https://fakestoreapi.com/">Fakestoreapi</a>
 
 ## Installation
 - First, run `npm i` to install the dependencies (need node.js for npm)
