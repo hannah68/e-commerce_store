@@ -1,10 +1,16 @@
 # ShopPrime
 > ShopPrime is an e-commerce website using Angular 15.
 
-<img src='./src/assets/images/shoprime1.png' width="600px"/>
-<img src='./src/assets/images/shoprime2.png' width="600px"/>
-<img src='./src/assets/images/shoprime3.png' width="600px"/>
-<img src='./src/assets/images/shoprime4.png' width="600px"/>
+<div display="flex">
+  <img src='./src/assets/images/shoprime1.png' width="500px"/>
+  <img src='./src/assets/images/shoprime4.png' width="500px"/>
+</div>
+
+<div display="flex">
+  <img src='./src/assets/images/shoprime2.png' width="500px"/>
+  <img src='./src/assets/images/shoprime3.png' width="500px"/>
+</div>
+
 
 ## Features
 The user has the ability to:
