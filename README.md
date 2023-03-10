@@ -1,4 +1,4 @@
-# ShopPrime
+# Shoprime
 > ShopPrime is an e-commerce website using Angular 15.
 
 <div display="flex">
@@ -19,6 +19,13 @@ The user has the ability to:
 - Add items to basket
 - Edit the basket(removing or adding more items)
 - Proceed to checkout
+
+## Methods Used
+- Integrated Angular **Material UI** components, such as buttons, cards, table, toolbar, snackbar, grid list, badge and expansion panel to provide a consistent, visually appealing design and user experience
+- Leveraged **TailwindCSS** to customize and extend the design of Angular Material UI components
+- Used Angular's built-in **HTTP client** to communicate with the backend API
+- Utilized **Angular's routing system** to create a smooth, intuitive navigation experience for users.
+- Implemented **Rxjs** observables and operators to handle asynchronous data streams
 
 ## Tech Stack
 - Angular
